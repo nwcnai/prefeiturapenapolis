@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+header img {
+    width: 200px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(237, 237, 237, 0.44)
+}
+
+.nav-header {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-header a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #63aaea;
+    transition: all 0.6s;
+    font-size: 18px;
+}
+
+.nav-header a:hover {
+    color: #596179;
+}
+
+.section-login h3 {
+    color: #596179;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.campo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    background: white;
+    margin-top: 19%;
+    margin-bottom: 19%;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titulologin {
+    color: #444444;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.button-login {
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: #63aaea;
+    color: white;
+    padding: 10px;
+    transition: all 0.5s;
+    border: none;
+}
+
+.button-login:hover {
+    background-color: #4f95d6;
+}
+
+.input-box label {
+    display: block;
+    text-align: left;
+    font-size: 17px;
+}
+
+.inputclass {
+    border-radius: 10px;
+    border: 1px solid #596179;
+    padding: 10px;
+    width: 300px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+footer {
+    height: 80px;
+}
+
+footer img {
+    width: 130px;
+}
+
+footer p {
+    font-size: 18px;
+    color: #596179;
+}
+
+.redes-sociais nav {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociais nav a {
+    color: #63aaea;
+    font-size: 35px;
+    transition: all 0.6s;
+}
+
+.redes-sociais nav a:hover {
+    color: #596179;
+}

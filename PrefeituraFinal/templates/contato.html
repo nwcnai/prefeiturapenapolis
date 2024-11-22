@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@650&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@430&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-div-logo">
+            <a href="/">
+                <img src="../static/img/brasaoprefeitura.png" alt="brasão prefeitura" class="imgprefeitura">
+            </a>
+        </div>
+
+        <div class="header-div-nav">
+            <nav class="nav-princ">
+                <a href="/">Home</a>
+                <a href="/administracao">Administração</a>
+                <a href="/planejamento">Planejamento</a>
+                <a href="/penapolenseshop">Penapolense SHOP</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="introducao">
+        <h2>Prezado cidadão,</h2>
+        <p>Estamos à disposição para atendê-lo por meio dos contatos abaixo.</p>
+    </section>
+
+    <section class="sessao-mapa-e-dados">
+        <div class="todos-dados-esquerda">
+            <p class="entreemcontato">Entre em contato por telefone ou pessoalmente.</p>
+            <div class="dados-esquerda">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Av. Maria Chica, 1400 - Centro - Penápolis / SP - 16300-005</p>
+            </div>
+
+            <div class="dados-esquerda">
+                <i class="fa-solid fa-clock"></i>
+                <p>De segunda a sexta, das 8h às 16h</p>
+            </div>
+
+            <div class="dados-esquerda">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>(18) 3654-2500</p>
+            </div>
+        </div>
+
+        <div id="mapa-direita"></div>
+    </section>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <nav>
+                <a href="https://www.instagram.com/prefeituradepenapolis/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/prefeituradepenapolis/?locale=pt_BR" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCcC0QQxdBxxSE1V76YyeQbQ/videos" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="/opiniao"><i class="fa-solid fa-envelope"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQclVVZbjzgTUCaXHoO5E5D3Pu-9UhxaU"></script>
+    <script>
+        function initMap() {
+            var coordenadas = {lat: -21.412295, lng: -50.076911};
+            var opcoesMapa = {zoom: 16, center: coordenadas};
+            var mapa = new google.maps.Map(document.getElementById('mapa-direita'), opcoesMapa);
+            var marcador = new google.maps.Marker({
+                position: coordenadas,
+                map: mapa,
+                title: 'Av. Maria Chica, 1400, Centro, Penápolis, SP, 16300-005'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQclVVZbjzgTUCaXHoO5E5D3Pu-9UhxaU&callback=initMap"></script>
+</body>
+
+</html>

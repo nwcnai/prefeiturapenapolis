@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/cadpolitico.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+
+        <nav class="nav-header">
+            <a href="/homefuncionario"><i class="fa-solid fa-house"></i> | Voltar ao home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-login">
+            <div class="campo-login">
+                <form class="formlogin" action="/cadnoticiaform" method="POST" enctype="multipart/form-data">
+                    <h3><i class="fa-solid fa-briefcase"></i> Cadastro de Notícias</h3>
+
+                    <div class="input-box">
+                        <label for="imagem">Imagem:</label>
+                        <input class="inputclass" name="imagem" id="imagem" type="file" accept="image/*" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="titulo">Título:</label>
+                        <input class="inputclass" name="titulo" id="titulo" required placeholder="Insira o título" type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="descricao">Descrição:</label>
+                        <textarea class="inputclass descricao-textarea" name="descricao" id="descricao" required placeholder="Insira a descrição" rows="4"></textarea>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="autor">Autor:</label>
+                        <input class="inputclass" name="autor" id="autor" required placeholder="Insira o autor" type="text">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="datapublicacao">Data publicação:</label>
+                        <input class="inputclass" name="datapublicacao" id="datapublicacao" required placeholder="Insira a data da publicação" type="text">
+                    </div>
+
+                    <button class="button-login" type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+
+        <div class="redes-sociais">
+            <nav>
+                <a href="https://www.instagram.com/prefeituradepenapolis/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/prefeituradepenapolis/?locale=pt_BR" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCcC0QQxdBxxSE1V76YyeQbQ/videos" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="/opiniao"><i class="fa-solid fa-envelope"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

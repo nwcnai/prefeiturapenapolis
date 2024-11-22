@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/cadpolitico.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+
+        <nav class="nav-header">
+            <a href="/editaradministracao"><i class="fa-solid fa-screwdriver-wrench"></i> | Voltar a administração</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-login">
+            <div class="campo-login">
+        <form action="/editarPolitico/{{ politico[0] }}" method="POST" enctype="multipart/form-data">
+                    <h3><i class="fa-solid fa-briefcase"></i> Edição de Político</h3>
+
+                    <div class="input-box">
+                        <label for="nome">Nome:</label>
+                        <input class="inputclass" name="nome" id="nome" required placeholder="Insira o nome" type="text" value="{{ politico[1] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="partido">Partido:</label>
+                        <input class="inputclass" name="partido" id="partido" required placeholder="Insira o partido" type="text" value="{{ politico[2] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="funcao">Função:</label>
+                        <input class="inputclass" name="funcao" id="funcao" required placeholder="Insira a função" type="text" value="{{ politico[3] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nova_imagem">Nova Foto (opcional):</label>
+                        <input class="inputclass" name="nova_imagem" id="nova_imagem" type="file" accept="image/*">
+                    </div>
+
+                    <button class="button-login" type="submit">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

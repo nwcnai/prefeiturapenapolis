@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/cadpolitico.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+
+        <nav class="nav-header">
+            <a href="/visualizarcamisacap"><i class="fa-solid fa-house"></i> | Voltar ao home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-login">
+            <div class="campo-login">
+                <form class="formlogin" action="/editarCamisasCAP/{{ camisa[0] }}" method="POST" enctype="multipart/form-data">
+                    <h3><i class="fa-solid fa-briefcase"></i> Editando camisas</h3>
+
+                    <div class="input-box">
+                        <label for="foto">Foto:</label>
+                        <input class="inputclass" name="foto" id="foto" type="file" accept="image/*">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nomecamisa">Nome da Camisa:</label>
+                        <input class="inputclass" name="nomecamisa" id="nomecamisa" required placeholder="Insira o nome" type="text" value="{{ camisa[2] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="anopublicacao">Ano publicação:</label>
+                        <input class="inputclass" name="anopublicacao" id="anopublicacao" required placeholder="Insira o ano do lançamento" type="text" value="{{ camisa[3] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="preco">Preço:</label>
+                        <input class="inputclass" name="preco" id="preco" required placeholder="Insira o preço" type="text" value="{{ camisa[4] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="fretegratis">Frete Grátis:</label>
+                        <select class="selectclass" name="fretegratis" id="fretegratis" required>
+                            <option value="" disabled selected>Há frete grátis?</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+
+                    <button class="button-login" type="submit">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+
+        <div class="redes-sociais">
+            <nav>
+                <a href="https://www.instagram.com/prefeituradepenapolis/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/prefeituradepenapolis/?locale=pt_BR" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCcC0QQxdBxxSE1V76YyeQbQ/videos" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="/opiniao"><i class="fa-solid fa-envelope"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: lightblue;
+    color: black;
+}
+
+:root {
+    --extremos: white;
+    --body: #ececec;
+    --titulos: #596179;
+    --azul-logo: #63aaea;
+    --subtitulos: #555;
+}
+
+.nav-princ {
+    margin: 20px;
+}
+
+.imgprefeitura {
+    margin-left: 20px;
+}
+
+/* Configurando o background do site */
+body {
+    background-color: var(--body);
+}
+
+/* Configurando o header */
+header {
+    background-color: var(--extremos);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 7px #000000c0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-div-logo img:hover {
+    cursor: pointer;
+}
+
+nav a {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.7s;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 7px;
+    color: var(--azul-logo);
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: var(--titulos);
+}
+.a-login {
+    border: 1px solid #63aaea;
+    border-radius: 20px;
+    padding: 10px 20px;
+    gap: 5px;
+}
+
+.a-login:hover {
+    border: 1px solid #596179;
+}
+
+.header-div-logo, .header-div-search {
+    margin: 20px 25px;
+}
+
+/* Configuração da seção prefeito e vice-prefeito */
+.governancah2 {
+    margin-top: 180px !important;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 33px;
+    color: var(--titulos);
+}
+
+.principais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 0px 30px;
+}
+
+.div-principais {
+    background-color: var(--extremos);
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nome {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.principais button, .vereadores button {
+    border: none;
+    border-radius: 20px;
+    padding: 7px 40px;
+    color: white;
+    background-color: var(--titulos);
+    margin-top: 5px;
+    min-width: 100%;
+}
+
+/* Configuração da grid de vereadores */
+.vereadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 0 30px;
+}
+
+.div-principais {
+    background-color: var(--extremos);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.botoes-acoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.botoes-acoes a {
+    text-decoration: none;
+}
+
+.btn-editar, .btn-excluir {
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 20px;
+    color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 5px;
+    min-width: 35%;
+}
+
+.btn-editar {
+    background-color: #63aaea;
+}
+
+.btn-excluir {
+    background-color: #FF0000;
+}
+
+.btn-editar:hover {
+    background-color: #519ee0;
+}
+
+.btn-excluir:hover {
+    background-color: #e21101;
+}
+
+/* Ajuste para fotos de vereadores */
+.vereadores-foto {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.vereadores-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Configuração do footer */
+footer {
+    margin-top: 7%;
+    background-color: var(--extremos);
+    box-shadow: 0px -1px 7px #000000c0;
+    padding: 13px;
+}
+
+.cadastro-email {
+    text-align: center;
+}
+
+.cadastro-email h3 {
+    font-size: 19px;
+}
+
+.cadastro-email p {
+    font-size: 15px;
+    color: var(--subtitulos);
+}
+
+.header-div-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin: 12px 0;
+}
+
+.footerbaixo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 18px;
+    color: #596179;
+}
+
+.redesfooter {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.redesfooter i {
+    font-size: 28px;
+    color: var(--azul-logo);
+}
+
+.redesfooter i:hover {
+    color: black;
+}
+
+.btn-cad {
+    margin-top: 20px;
+    padding: 6px 15px;
+    background-color: var(--azul-logo);
+    color: #fff;
+    border-radius: 4px;
+}

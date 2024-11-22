@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+header img {
+    width: 200px;
+}
+
+.nav-header {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-header a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #63aaea;
+    transition: all 0.6s;
+    font-size: 18px;
+}
+
+.nav-header a:hover {
+    color: #596179;
+}
+
+.section-funcionario h3 {
+    color: #596179;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(237, 237, 237, 0.44);
+}
+
+.campo-funcionario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0px 40px;
+    margin-bottom: 60px;
+}
+
+.funcionario {
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    width: 240px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+}
+
+.funcionario img {
+    border-radius: 20px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.funcionario a {
+    border: 1px solid #63aaea;
+    border-radius: 13px;
+    color: #596179;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.funcionario a:hover {
+    border-radius: 13px;
+    background-color: #63aaea;
+    color: white;
+    padding: 10px;
+}
+
+footer {
+    height: 80px;
+}
+
+footer img {
+    width: 130px;
+}
+
+footer p {
+    font-size: 18px;
+    color: #596179;
+}
+
+.redes-sociais nav {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociais nav a {
+    color: #63aaea;
+    font-size: 35px;
+    transition: all 0.6s;
+}
+
+.redes-sociais nav a:hover {
+    color: #596179;
+}
+
+#camisaobjetic {
+    object-fit: contain;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/penapolenseshop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="/homefuncionario" class="buttonvoltarhome">Voltar ao Home</a>
+
+    <header>
+        <img src="./static/img/mascote.jpg" class="imgescudo">
+
+        <div class="escritasheader">
+            <h2>PENAPOLENSE</h2>
+            <p>LOJA OFICIAL DO <strong>CAP</strong></p>
+        </div>
+    </header>
+
+    <img src="../static/img/fundoback.webp" class="imgbanner">
+
+    <section class="compras">
+        <div class="backgroundcamisas">
+            <h2>Bem-vindo, fiel torcedor!</h2>
+            <p class="p-introducao">MODELOS ATUAIS</p>
+
+        <div class="container-camisas">
+            {% for camisa in Camisas %}
+                <div class="camisa">
+                    <img src="/imagemFETCHONECAMISACAP/{{ camisa[0] }}" alt="Imagem da camisa" class="camisa-foto1"/>
+                    <hr>
+                    <p class="titulo">{{ camisa[2] }} - ({{ camisa[3] }})</p>
+                    {% if camisa[5] == 'Sim' %}
+                        <p class="preco">R$ {{ camisa[4] }} com <span class="frete">FRETE GRÁTIS</span></p>
+                    {% else %}
+                        <p class="preco">R$ {{ camisa[4] }}</p>
+                    {% endif %}
+
+                    <div class="botoes-acoes">
+                        <a href="/editarCamisasCAP/{{ camisa[0] }}" class="btn-editar">
+                            <i class="fa-solid fa-pen"></i> Editar</a>
+
+                        <a href="/excluircamisasCAP/{{ camisa[0] }}" onclick="return confirm('Você tem certeza que deseja excluir a camisa {{ camisa[2] }}?');" class="btn-excluir">
+                            <i class="fa-solid fa-trash"></i> Excluir</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+    </section>
+
+    <footer>
+            <a href="https://www.penapolis.sp.gov.br/portal/secretarias/7/esportes-lazer-e-juventude" target="_blank">
+            <img src="./static/img/secretaria.png" alt="secretaria de lazer e juventude" width="180px"></a>
+
+        <p>&copy; Clube Atlético Penapolense 2024. Todos os direitos reservados.</p>
+
+        <a href="https://www.instagram.com/penapolenseoficial/" target="_blank">
+        <img src="./static/img/CAPescudo.png" alt="penapolense-instgram" width="100px"></a>
+    </footer>
+
+<script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

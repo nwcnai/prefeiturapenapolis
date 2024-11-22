@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/inicio.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+        <nav class="nav-header">
+            <a href="/administracao">Administração</a>
+            <a href="/planejamento">Planejamento</a>
+            <a href="/contato">Contato</a>
+            <a href="/penapolenseshop">Penapolense SHOP</a>
+            <a href="/login" class="a-login"><i class="fa-solid fa-computer"></i> Entrar</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section-noticias">
+            <h3>Pulso da Cidade: Notícias Municipais em Destaque</h3>
+            <div class="campo-noticias">
+                {% for noticia in Noticias %}
+                    <div class="noticia">
+                        <img src="/imagemFETCHONEAPP/{{ noticia[0] }}"/>
+                        <p class="titulonoticia">{{ noticia[2] }}</p>
+                        <a class="a-saibamais" href="/saibamais/{{ noticia[0] }}">Saiba mais</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+            <nav>
+                <a href="https://www.instagram.com/prefeituradepenapolis/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/prefeituradepenapolis/?locale=pt_BR" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCcC0QQxdBxxSE1V76YyeQbQ/videos" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="/opiniao"><i class="fa-solid fa-envelope"></i></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

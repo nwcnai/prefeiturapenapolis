@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/cadpolitico.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+
+        <nav class="nav-header">
+            <a href="/editaradministracao"><i class="fa-solid fa-screwdriver-wrench"></i> | Voltar a administração</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-login">
+            <div class="campo-login">
+        <form action="/editarNoticia/{{ noticia[0] }}" method="POST" enctype="multipart/form-data">
+                    <h3><i class="fa-solid fa-briefcase"></i> Edição de Notícias</h3>
+                    <div class="input-box">
+                        <label for="nova_imagem">Nova Foto (opcional):</label>
+                        <input class="inputclass" name="nova_imagem" id="nova_imagem" type="file" accept="image/*">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="titulo">Titulo:</label>
+                        <input class="inputclass" name="titulo" id="titulo" required placeholder="Insira o nome" type="text" value="{{ noticia[2] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="descricao">Descrição:</label>
+                        <input class="inputclass" name="descricao" id="descricao" required placeholder="Insira o nome" type="text" value="{{ noticia[3] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="autor">Autor:</label>
+                        <input class="inputclass" name="autor" id="autor" required placeholder="Insira o nome" type="text" value="{{ noticia[4] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="datapublicacao">Data Publicação:</label>
+                        <input class="inputclass" name="datapublicacao" id="datapublicacao" required placeholder="Insira o nome" type="text" value="{{ noticia[5] }}">
+                    </div>
+
+                    <button class="button-login" type="submit">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

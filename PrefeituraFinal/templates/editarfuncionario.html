@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="../static/css/cadpolitico.css">
+</head>
+<body>
+    <header>
+        <img src="../static/img/brasaoprefeitura.png"/>
+
+        <nav class="nav-header">
+            <a href="/visualizarfuncionario"><i class="fa-solid fa-screwdriver-wrench"></i> | Voltar aos funcionários</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-login">
+            <div class="campo-login">
+        <form action="/editarFuncionario/{{ funcionario[0] }}" method="POST" enctype="multipart/form-data">
+                    <h3><i class="fa-solid fa-briefcase"></i> Edição de Funcionários</h3>
+
+                    <div class="input-box">
+                        <label for="nome">Email:</label>
+                        <input class="inputclass" name="email" id="email" required placeholder="Insira o email" type="email" value="{{ funcionario[1] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nome">Senha:</label>
+                        <input class="inputclass" name="senha" id="senha" required placeholder="Insira a senha" type="password" value="{{ funcionario[2] }}">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nome">Nome:</label>
+                        <input class="inputclass" name="nome" id="nome" required placeholder="Insira o nome" type="text" value="{{ funcionario[3] }}">
+                    </div>
+
+                    <button class="button-login" type="submit">Salvar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="../static/img/brasaosp.png"/>
+        <p>&copy; Prefeitura Penapolense - 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/71c60d6887.js" crossorigin="anonymous"></script>
+</body>
+</html>

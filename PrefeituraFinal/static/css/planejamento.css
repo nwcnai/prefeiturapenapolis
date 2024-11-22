@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: lightblue;
+    color: black;
+  }
+
+:root {
+    --extremos: white;
+    --body: #ececec;
+    --titulos: #596179;
+    --azul-logo: #63aaea;
+    --subtitulos: #555;
+}
+
+.nav-princ {
+    margin: 20px;
+}
+
+.imgprefeitura {
+    margin-left: 20px;
+}
+
+/* configurando o background do site */
+body {
+    background-color: var(--body);
+}
+
+/* configurando - header */
+header {
+    background-color: var(--extremos);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0px 0px 7px #000000c0;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-div-logo img:hover {
+    cursor: pointer;
+}
+
+nav a {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.7s;
+
+    font-size: 18px;
+    text-decoration: none;
+    padding: 13px;
+    color: var(--azul-logo);
+}
+
+nav a:hover {
+    transition: all 0.3s;
+
+    cursor: pointer;
+    color: var(--titulos);
+}
+
+.header-div-logo, .header-div-search {
+    margin: 20px 25px;
+}
+
+.a-login {
+    border: 1px solid #63aaea;
+    border-radius: 20px;
+    padding: 10px 20px;
+    gap: 5px;
+}
+
+.a-login:hover {
+    border: 1px solid #596179;
+}
+
+
+/* configurando - infraestrutura */
+.espaco-header-projetos {
+    margin-top: 160px;
+}
+
+h6 {
+    color: var(--titulos);
+    font-size: 24px;
+    margin-bottom: 35px;
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    text-align: center;
+    margin: 0px 25px;
+}
+
+.titulo-projeto, .descricao-projeto {
+    font-family: 'Montserrat';
+    margin: 5px 0px;
+}
+
+.titulo-projeto {
+    font-size: 18px;
+}
+
+.descricao-projeto {
+    font-size: 12px;
+}
+
+.espaco-cima-baixo-projetos hr {
+    margin: 35px 0px;
+}
+
+.foto-obra {
+    margin: auto;
+    width: 600px;
+    height: 330px;
+    overflow: hidden; /* sobras da foto */
+}
+
+.foto-obra {
+    margin: auto;
+    width: 600px;
+    height: 330px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-obra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* configurando - footer */
+footer {
+    margin-top: 70px;
+    background-color: var(--extremos);
+    box-shadow: 0px -1px 7px #000000c0;
+    padding: 13px;
+}
+
+.cadastro-email h3 {
+    font-size: 19px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.cadastro-email p {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    color: var(--subtitulos);
+} 
+
+.cadastro-email {
+    text-align: center;
+}
+
+.header-div-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expresse {
+    margin-top: 30px !important;
+}
+
+hr {
+    margin: 12px 0px;
+}
+
+.textarea-opiniao {
+    margin-bottom: 6px;
+
+    height: 16px;
+    width: 397px;
+
+    resize: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea-opiniao::placeholder {
+color: black;
+font-size: 12px;
+}
+
+.button-opiniao {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.limparopiniao {
+    background-color: #ff7f50 !important;
+}
+
+.footerbaixo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.govsp-footer {
+    justify-self: flex-start;
+}
+
+.space-div-footer {
+    text-align: center;
+    justify-self: center;
+}
+
+footer p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+    
+        color: var(--titulos);
+}
+
+.redesfooter {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redesfooter i {
+    transition: all 0.2s;
+
+    font-size: 28px;
+    color: var(--azul-logo);
+
+}
+
+.redesfooter i:hover {
+    transition: all 0.4s;
+    color: black;
+}
+
+/* EDITAR PLANEJAMENTO */
+
+.botoes-acoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.botoes-acoes a {
+    text-decoration: none;
+}
+
+.btn-editar, .btn-excluir {
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 20px;
+    color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 5px;
+    min-width: 20%;
+    justify-content: center;
+}
+
+.btn-editar {
+    background-color: #63aaea;
+}
+
+.btn-excluir {
+    background-color: #FF0000;
+}
+
+.btn-editar:hover {
+    background-color: #519ee0;
+}
+
+.btn-excluir:hover {
+    background-color: #e21101;
+}
